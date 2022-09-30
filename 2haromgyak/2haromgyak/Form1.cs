@@ -17,8 +17,7 @@ namespace _2haromgyak
         public Form1()
         {
             InitializeComponent();
-            label1.Text = Resource1.LastName;
-            label2.Text = Resource1.FirstName;
+            label2.Text = Resource1.FullName;
             button1.Text = Resource1.Add;
 
             listBox1.DataSource = users;
@@ -30,8 +29,8 @@ namespace _2haromgyak
         {
             User u = new User()
             {
-                FirstName = textBox1.Text,
-                LastName = textBox2.Text
+
+                FullName = textBox2.Text
             };
             users.Add(u);
                 
