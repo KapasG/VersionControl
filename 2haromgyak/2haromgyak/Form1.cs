@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2haromgyak.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,28 @@ namespace _2haromgyak
 {
     public partial class Form1 : Form
     {
+        BindingList<User> users = new BindingList<User>();
         public Form1()
         {
             InitializeComponent();
             label1.Text = Resource1.LastName;
             label2.Text = Resource1.FirstName;
             button1.Text = Resource1.Add;
+
+            listBox1.DataSource = users;
+            listBox1.ValueMember = "ID";
+            listBox1.DisplayMember = "FullName";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            User u = new User()
+            {
+                FirstName = textBox1.Text,
+                LastName = textBox2.Text
+            };
+            users.Add(u);
+                
         }
     }
 }
