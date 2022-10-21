@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2haromgyak", "2haromgyak\2haromgyak.csproj", "{50BA85EE-8045-4228-BE89-4E516E336958}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otodik", "Otodik\Otodik.csproj", "{0C39F153-5724-4C4A-B718-2E0EB4FAA94A}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{50BA85EE-8045-4228-BE89-4E516E336958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50BA85EE-8045-4228-BE89-4E516E336958}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50BA85EE-8045-4228-BE89-4E516E336958}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50BA85EE-8045-4228-BE89-4E516E336958}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0C39F153-5724-4C4A-B718-2E0EB4FAA94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0C39F153-5724-4C4A-B718-2E0EB4FAA94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C39F153-5724-4C4A-B718-2E0EB4FAA94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
