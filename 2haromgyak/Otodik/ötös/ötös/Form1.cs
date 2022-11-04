@@ -1,4 +1,5 @@
-﻿using ötös.Entities;
+﻿using ötös.Abstarction;
+using ötös.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,9 @@ namespace ötös
 {
     public partial class Form1 : Form
     {
-        List<Ball> _balls = new List<Ball>();
-        private BallFactory _factory;
-        public BallFactory Factory
+        List<Toy> _toys = new List<Toy>();
+        private IToyFactory _factory;
+        public IToyFactory Factory
         {
             get { return _factory; }
             set { _factory = value; }
@@ -33,30 +34,30 @@ namespace ötös
 
         private void createTimer_Tick(object sender, EventArgs e)
         {
-            Ball b = Factory.CreateNew();
+            var b = Factory.CreateNew();
             b.Left = -b.Width;
-            _balls.Add(b);
+            _toys.Add(b);
             mainPanel.Controls.Add(b);
         }
 
         private void conveyorTimer_Tick(object sender, EventArgs e)
         {
             int maxPos = 0;
-            foreach (Ball ball in _balls)
+            foreach (var toy in _toys)
             {
-                ball.MoveToy();
-                if (ball.Left>maxPos)
+                toy.MoveToy();
+                if (toy.Left>maxPos)
                 {
-                    maxPos = ball.Left;
+                    maxPos = toy.Left;
                 }
             }
 
 
             if (maxPos > 1000)
             {
-                Ball oldestBall = _balls[0];
+                var oldestBall = _toys[0];
                 mainPanel.Controls.Remove(oldestBall);
-                _balls.Remove(oldestBall);
+                _toys.Remove(oldestBall);
             }
 
 
